@@ -1,12 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Items from './pages/Items';
-import Sections from './pages/Sections'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Items from "./pages/Items";
+import Sections from "./pages/Sections";
+import Home from "./pages/Home";
 
 const App = () => (
   <Router>
     <Routes>
-      <Route path="/" element={<h1>This is home page, Go to /sections </h1>} />
+      <Route path="/" element={<Home />} />
       <Route path="/sections" element={<Sections />} />
       <Route path="/sections/:sectionName" element={<Items />} />
     </Routes>
