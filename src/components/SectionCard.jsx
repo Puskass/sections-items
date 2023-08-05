@@ -2,15 +2,15 @@ import React from "react";
 
 const SectionCard = ({ sectionName, sectionImage }) => {
   return (
-    <div className="max-w-lg mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-700 mb-2 relative overflow-hidden">
+    <div className="hover:animate-bump max-w-lg mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-700 mb-2 relative overflow-hidden">
       <img
         className="rounded-t-lg h-52 sm:h-72 lg:h-96 w-full object-cover"
         src={sectionImage}
         alt={sectionName}
       />
       <div
-        className="absolute inset-0 bg-gradient-to-b from-amber-600 to-amber-200 opacity-10"
-        style={{ zIndex: 1 }}
+        className="rounded-xl absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50"
+        // style={{ zIndex: 0 }}
       />
       <div className="p-2">
         <h1 className="sm:text-3xl text-2xl font-bold py-2 sm:py-4 dark:text-white relative z-10">
