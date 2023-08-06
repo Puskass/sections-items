@@ -1,7 +1,7 @@
 export const sections = [
   {
     id: generateUniqueId(),
-    sectionName: "Kafa",
+    sectionName: "Coffee",
     sectionImage: 'https://images.pexels.com/photos/7362647/pexels-photo-7362647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   },
   {
@@ -14,21 +14,7 @@ export const sections = [
     sectionName: "Pasta",
     sectionImage: "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
-  // {
-  //   id: generateUniqueId(),
-  //   sectionName: "Alcohol",
-  //   sectionImage: "https://images.pexels.com/photos/1267700/pexels-photo-1267700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  // },
-  // {
-  //   id: generateUniqueId(),
-  //   sectionName: "Burgers",
-  //   sectionImage: "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  // },
-  // {
-  //   id: generateUniqueId(),
-  //   sectionName: "Salads",
-  //   sectionImage: "https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  // },
+  
   {
     id: generateUniqueId(),
     sectionName: "Desserts",
