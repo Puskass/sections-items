@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionCardV1 = ({ sectionName, sectionImage }) => {
+const SectionCardV1 = ({ sectionName, sectionImage, id }) => {
   const backgroundStyle = {
     backgroundImage: `url(${sectionImage})`,
     backgroundSize: "cover",
@@ -13,6 +13,7 @@ const SectionCardV1 = ({ sectionName, sectionImage }) => {
         className="rounded-xl shadow-lg object-cover w-full h-36 sm:h-72"
         style={backgroundStyle}
         alt=""
+        id={id}
       />
 
       <div
@@ -23,11 +24,11 @@ const SectionCardV1 = ({ sectionName, sectionImage }) => {
       <div className="flex items-center text-white absolute top-0 left-0 p-4">
         <h5 className="text-3xl font-semibold">{sectionName}</h5>
       </div>
-      <div className="absolute top-16 left-4 font-medium text-gray-300">
+      {/* <div className="absolute top-16 left-4 font-medium text-gray-300">
         <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
+      </div> */}
       <div className="absolute bottom-0 right-0 p-4 text-white">
-        {/* <svg
+        <svg
           className="w-6 h-4 ml-4 mt-2"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +42,7 @@ const SectionCardV1 = ({ sectionName, sectionImage }) => {
             strokeWidth="2"
             d="M1 5h12m0 0L9 1m4 4L9 9"
           />
-        </svg> */}
+        </svg>
       </div>
     </div>
   );
