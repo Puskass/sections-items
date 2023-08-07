@@ -136,14 +136,14 @@ export const menu = [
     items: [
       {
         id: generateUniqueId(),
-        title: "Chocolate Milkshake",
+        title: "Coca Cola",
         price: 4,
         description: "Creamy chocolate-flavored milkshake",
         currency: "BAM",
       },
       {
         id: generateUniqueId(),
-        title: "Strawberry Milkshake",
+        title: "Cockta",
         price: 4,
         description: "Refreshing strawberry-flavored milkshake",
         currency: "BAM",

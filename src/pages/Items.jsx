@@ -21,6 +21,8 @@ const Items = () => {
     (section) => section.sectionName.toLowerCase() === sectionName.toLowerCase()
   );
 
+  const formattedSearch = search.toLowerCase().replace(/\s/g, '');
+
   return (
     <div className="max-w-lg mx-auto px-2">
      
@@ -33,11 +35,12 @@ const Items = () => {
           </h2>
 
           {section.items
-            .filter((item) => item.title.toLowerCase().includes(search))
+            .filter((item) => item.title.toLowerCase().replace(/\s/g, '').includes(formattedSearch))
             .map((item) => (
               <ItemCard key={item.id} item={item} />
             ))}
         </div>
+
       ) : (
         <div className="text-center">
           <Spinner
