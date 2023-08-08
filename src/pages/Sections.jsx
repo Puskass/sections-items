@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import SectionCard from "../components/SectionCard";
 import { sections } from "../assets/data/sections";
 import { Link } from "react-router-dom";
-import { Spinner } from "flowbite-react";
 import Navbar from "../shared/Navbar";
+import LoadingSpinner from "../shared/LoadingSpinner";
 
 const Sections = () => {
   const [dataFetched, setDataFetched] = useState(false);
@@ -33,13 +33,7 @@ const Sections = () => {
             </React.Fragment>
           ))
         ) : (
-          <div className="text-center">
-            <Spinner
-              aria-label="Center-aligned spinner"
-              color="warning"
-              size="lg"
-            />
-          </div>
+          <LoadingSpinner />
         )}
       </div>
     </>
