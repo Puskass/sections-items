@@ -3,13 +3,12 @@ import { useParams } from "react-router-dom";
 import { menu } from "../assets/data/menu";
 import ItemCard from "../components/ItemCard";
 import Input from "../shared/Input";
-import debounce from "lodash.debounce";
 import LoadingSpinner from "../shared/LoadingSpinner";
+import useDebounce from "../hooks/useDebounce";
 
 const Items = () => {
   const [dataFetched, setDataFetched] = useState(false);
   const [search, setSearch] = useState("");
-  // const [filteredItems, setFilteredItems] = useState([]);
 
   // Simulate fetching data with a delay of 2 seconds
   useEffect(() => {
@@ -24,26 +23,14 @@ const Items = () => {
     (section) => section.sectionName.toLowerCase() === sectionName.toLowerCase()
   );
 
-  const formattedSearch = search.toLowerCase().replace(/\s/g, "");
+  // Use the useDebounce hook to get the debounced search value
+  const debouncedSearch = useDebounce(search, 300); // xxx milliseconds delay
+
+  const formattedSearch = debouncedSearch.toLowerCase().replace(/\s/g, "");
 
   const filteredItems = section.items.filter((item) =>
-  item.title.toLowerCase().replace(/\s/g, "").includes(formattedSearch)
-);
-  // Debounce the search function
-  // useEffect(() => {
-  //   const debounceSearch = debounce(() => {
-  //     const filteredItems = section.items.filter((item) =>
-  //       item.title.toLowerCase().replace(/\s/g, "").includes(formattedSearch)
-  //     );
-  //     setFilteredItems(filteredItems);
-  //   }, 500);
-
-  //   debounceSearch();
-  //   console.log('Rerendered');
-  //   return () => {
-  //     debounceSearch.cancel(); // Cleanup function to cancel the debounce
-  //   };
-  // }, [formattedSearch, section.items]);
+    item.title.toLowerCase().replace(/\s/g, "").includes(formattedSearch)
+  );
 
   return (
     <div className="max-w-lg mx-auto px-2">
