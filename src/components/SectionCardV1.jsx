@@ -8,12 +8,11 @@ const SectionCardV1 = ({ sectionName, sectionImage, id }) => {
   };
 
   return (
-    <div className="hover:animate-bump mb-4 max-w-lg mx-auto relative">
+    <div id={id} className="hover:animate-bump mb-4 max-w-lg mx-auto relative">
       <div
         className="rounded-xl shadow-lg object-cover w-full h-36 sm:h-72"
         style={backgroundStyle}
         alt=""
-        id={id}
       />
 
       <div className="rounded-xl absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-50" />

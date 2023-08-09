@@ -2,9 +2,10 @@ import React from "react";
 
 const SectionCard = ({ sectionName, sectionImage, id }) => {
   return (
-    <div className="hover:animate-bump max-w-lg mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-700 mb-2 relative overflow-hidden">
+    <div 
+    id={id}
+    className="hover:animate-bump max-w-lg mx-auto bg-white rounded-lg shadow-lg dark:bg-gray-700 mb-2 relative overflow-hidden">
       <img
-        id={id}
         className="rounded-t-lg h-52 sm:h-72 lg:h-96 w-full object-cover"
         src={sectionImage}
         alt={sectionName}

@@ -35,7 +35,7 @@ const Items = () => {
   return (
     <div className="max-w-lg mx-auto px-2">
       <Input value={search} onChange={setSearch} />
-
+      
       {dataFetched ? (
         <div>
           <h2 className="text-6xl font-bold py-2 mb-6">
@@ -49,6 +49,7 @@ const Items = () => {
       ) : (
         <LoadingSpinner />
       )}
+      
     </div>
   );
 };
